@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background: url("images/background.png") no-repeat center fixed;
+  background-size: contain;
+  background-color: #303030;
+  padding-bottom: 150px;
+}
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.adfly {
+  width: 100%;
+  cursor: pointer;
+}
+
+.left-col,
+.right-col {
+  width: 30%;
+}
+
+.image1 {
+  margin-top: 60px;
+  cursor: pointer;
+}
+.image2 {
+  margin-top: 50px;
+}
+.image3 {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  margin-left: 110px;
+}
+.baby-row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.baby-row img {
+  display: block;
+  width: 40%;
+}
+.image4 {
+  margin-top: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.ram-download {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.ram-download p {
+  font-size: 88px;
+  letter-spacing: -6%;
+  font-family: "Libre Barcode 128 Text", cursive;
+  color: #da8381;
+  text-transform: uppercase;
+}
+.ram-download img {
+  cursor: pointer;
+}
+.jim {
+  display: block;
+  width: 100%;
+  margin-left: -100px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 0;
+}
+.mali {
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+}
+
+.speed {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.speed img {
+  display: block;
+  height: 100%;
+}
+.brz {
+  margin-left: -100px;
+}
+.button {
+  cursor: pointer;
+}
+
+.wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  font-size: 100px;
+  font-family: "Lacquer";
+  background-color: black;
+  color: white;
+}
+.subheading {
+  font-size: 40px;
+  font-family: "Koulen";
+  margin-top: -30px;
+  margin-bottom: 30px;
+
+  color: white;
+}
+.triangle {
+  margin-bottom: -50px;
+  position: relative;
+  position: relative;
+  z-index: 1;
+}
+.wheel-img {
+  transition: all 5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+  z-index: 0;
+}
+.wheel button {
+  margin-top: 50px;
+  font-size: 96px;
+  background: #00ff0a;
+  border: 0;
+  font-family: "Lacquer";
+  line-height: 0.6;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.wheel button:hover {
+  background: red;
+}
+
+.nemoj-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.nemoj-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  padding: 50px;
+  position: relative;
+}
+.nemoj-popup p {
+  color: white;
+  font-size: 60px;
+  font-family: Koulen;
+  position: relative;
+  z-index: 3;
+}
+.nemoj-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+.nemoj-wrap button {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.coupon-overlay {
+  width: 100%;
+  height: 100vh;
+  background: url("images/confetti-4.gif") no-repeat center,
+    linear-gradient(#075600, #075600);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.coupon-overlay img {
+  transition: 0.1s;
+}
+.coupon,
+.coupon-overlay button {
+  position: relative;
+}
+.coupon-overlay button {
+  background: #075600;
+  font-size: 30px;
+  color: white;
+  border: 0;
+  box-shadow: 5px 5px 10px #053d00, -5px -5px 10px #0f6f00,
+    inset 5px 5px 10px #053d0000, inset -5px -5px 10px #0f6f0000;
+  padding: 10px 30px;
+  border-radius: 100px;
+  transition: 0.5s;
+}
+.coupon-overlay button:hover {
+  box-shadow: 5px 5px 10px #053d0000, -5px -5px 10px #0f6f0000,
+    inset 3px 3px 5px #053d00, inset -3px -3px 5px #0f6f00;
+}
+.shreks {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shreks .christ {
+  position: absolute;
+  top: 0;
+  left: -600px;
+  /* animation: christ 10s linear infinite; */
+}
+.shreks .face {
+  position: absolute;
+  top: 0;
+  right: -700px;
+  /* animation: face 7s 5s linear infinite; */
+}
+.shreks .original {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* animation: original 5s 10s linear infinite; */
+  transform: translate(-50%, -50%) scale(0);
+}
+.shreks .tpose {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 400px;
+  /* animation: tpose 10s linear infinite; */
+}
+.shreks .wide {
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  width: 500px;
+  opacity: 0;
+  /* animation: wide 4s 10s steps(20) infinite; */
+  transform-origin: right;
+}
+
+.warning {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  z-index: 33333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+.warning h1 {
+  font-size: 64px;
+  text-align: center;
+  color: white;
+  font-family: Koulen;
+}
+
+.paint-popup {
+  width: 100%;
+  height: 100vh;
+  background: #000000aa;
+  position: fixed;
+  z-index: 22222;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.paint-popup img {
+  width: 1000px;
+  height: auto;
+}
+.paint-popup button {
+  font-size: 24px;
+  background: white;
+  color: black;
+  border: 5px solid green;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.paint-popup button:hover {
+  background: green;
+  color: white;
+}
+@keyframes christ {
+  from {
+    left: -200px;
+    top: 100%;
+    transform: rotate(0);
+  }
+  to {
+    left: 100%;
+    top: 0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes face {
+  from {
+    right: 500px;
+    top: 10%;
+    transform: scale(0);
+  }
+  to {
+    right: 100%;
+    top: 10%;
+    transform: scale(1);
+  }
+}
+@keyframes original {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+  }
+}
+@keyframes tpose {
+  0% {
+    top: 100%;
+    left: 80%;
+  }
+  25% {
+    top: 0;
+    left: 60%;
+  }
+  50% {
+    top: 100%;
+    left: 40%;
+  }
+  75% {
+    top: 0;
+    left: 20%;
+  }
+  100% {
+    top: 100%;
+    left: 0;
+  }
+}
+@keyframes wide {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  5% {
+    transform: scaleX(1.1);
+    opacity: 0;
+  }
+  10% {
+    transform: scaleX(1.2);
+    opacity: 1;
+  }
+  15% {
+    transform: scaleX(1.3);
+    opacity: 0;
+  }
+  20% {
+    transform: scaleX(1.4);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleX(1.5);
+    opacity: 0;
+  }
+  30% {
+    transform: scaleX(1.6);
+    opacity: 1;
+  }
+  35% {
+    transform: scaleX(1.7);
+    opacity: 0;
+  }
+  40% {
+    transform: scaleX(1.8);
+    opacity: 1;
+  }
+  45% {
+    transform: scaleX(1.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(2);
+    opacity: 1;
+  }
+  55% {
+    transform: scaleX(2.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scaleX(2.2);
+    opacity: 1;
+  }
+  65% {
+    transform: scaleX(2.3);
+    opacity: 0;
+  }
+  70% {
+    transform: scaleX(2.4);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleX(2.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scaleX(2.6);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(2.7);
+    opacity: 0;
+  }
+  90% {
+    transform: scaleX(2.8);
+    opacity: 1;
+  }
+  95% {
+    transform: scaleX(2.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(3);
+    opacity: 1;
+  }
+}
